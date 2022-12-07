@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            ReverseNumber num = new ReverseNumber();
-            num.CalculateReverseNumber();
+            CouponNumbers num = new CouponNumbers();
+            num.CouponNumberBuilder();
         }
     }
 }
