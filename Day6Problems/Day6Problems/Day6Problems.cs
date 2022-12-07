@@ -7,36 +7,14 @@ using System.Threading.Tasks;
 
 namespace Day6Problems
 {
-    public class StopWatchProblem
+    internal class Day6Problems
     {
-        public int s;
-
-        public StopWatchProblem(int S)
+        public void Simulate_Stopwatch()
         {
-            s = S;
-        }
-
-  
-        public static StopWatchProblem UserInputForStopWatch()
-        {
-            Console.WriteLine("Enter the Number for how many times to print the statement to get time elapsed for it : ");
-            int st = Convert.ToInt32(Console.ReadLine());
-
-            return new StopWatchProblem(st)
-            {
-                s = st
-            };
-        }
-        public void CalculateStopWatchTime()
-        {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            for (int i = 0; i < s; i++)
-            {
-                Console.WriteLine("Hello Mahesh Waghmare");
-            }
-            stopWatch.Stop();
-            Console.WriteLine("Time Elapsed : {0}", stopWatch.Elapsed);
+            Console.WriteLine("\n ");
+            DateTime start = DateTime.Parse(" 7:30");
+            DateTime end = DateTime.Parse(" 16:00 ");
+            Console.WriteLine((end - start).TotalHours);
         }
     }
 }
