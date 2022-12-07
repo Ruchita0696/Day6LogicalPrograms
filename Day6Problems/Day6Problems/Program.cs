@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            CouponNumbers num = new CouponNumbers();
-            num.CouponNumberBuilder();
+            StopWatchProblem num = new();
+            num.CalculateStopWatchTime();
         }
     }
 }
