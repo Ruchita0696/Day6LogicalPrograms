@@ -8,11 +8,11 @@ namespace Day6Problems
 {
     internal class Day6Problems
     {
-        public void Perfect_Number()
+        public void Prime_Number()
         {
             int n, i, sum;
             Console.WriteLine("");
-            Console.Write("Check whether a given number is perfect number or not:\n");
+            Console.Write("Check whether a given number is prime number or not:\n");
             Console.Write("--------------------------------------------------------");
             Console.Write("\n\n");
 
@@ -30,9 +30,9 @@ namespace Day6Problems
             }
             Console.Write("\nThe sum of the divisor is : {0}", sum);
             if (sum == n)
-                Console.Write("\nSo, the number is perfect.");
+                Console.Write("\nSo, the number is prime.");
             else
-                Console.Write("\nSo, the number is not perfect.");
+                Console.Write("\nSo, the number is not prime.");
             Console.Write("\n");
         }
     }
