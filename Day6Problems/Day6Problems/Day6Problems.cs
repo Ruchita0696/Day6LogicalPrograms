@@ -8,26 +8,32 @@ namespace Day6Problems
 {
     internal class Day6Problems
     {
-        public void Fibonacci_Series()
+        public void Perfect_Number()
         {
-            int num;
-            int num1 = 0;
-            int num2 = 1;
-            int num3;
-            Console.Write("Enter the number : ");
-            // string inputByUser = Console.ReadLine();
-            //int num = Int32.Parse(inputByUser);
-            num = int.Parse(Console.ReadLine());
-            Console.Write(" " + num1 + " " + num2 + " ");
+            int n, i, sum;
+            Console.WriteLine("");
+            Console.Write("Check whether a given number is perfect number or not:\n");
+            Console.Write("--------------------------------------------------------");
+            Console.Write("\n\n");
 
-            for (int i = 2; i <= num; i++)
+            Console.Write("Input the  number : ");
+            n = Convert.ToInt32(Console.ReadLine());
+            sum = 0;
+            Console.Write("The positive divisor  : ");
+            for (i = 1; i < n; i++)
             {
-                num3 = num1 + num2;
-                Console.Write(" " + num3 + " ");
-                num1 = num2;
-                num2 = num3;
+                if (n % i == 0)
+                {
+                    sum = sum + i;
+                    Console.Write("{0}  ", i);
+                }
             }
-
+            Console.Write("\nThe sum of the divisor is : {0}", sum);
+            if (sum == n)
+                Console.Write("\nSo, the number is perfect.");
+            else
+                Console.Write("\nSo, the number is not perfect.");
+            Console.Write("\n");
         }
     }
 }
