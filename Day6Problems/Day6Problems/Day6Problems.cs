@@ -6,34 +6,41 @@ using System.Threading.Tasks;
 
 namespace Day6Problems
 {
-    internal class Day6Problems
-    {
-        public void Prime_Number()
-        {
-            int n, i, sum;
-            Console.WriteLine("");
-            Console.Write("Check whether a given number is prime number or not:\n");
-            Console.Write("--------------------------------------------------------");
-            Console.Write("\n\n");
 
-            Console.Write("Input the  number : ");
-            n = Convert.ToInt32(Console.ReadLine());
-            sum = 0;
-            Console.Write("The positive divisor  : ");
-            for (i = 1; i < n; i++)
+    public class ReverseNumber
+    {
+        public int RN;
+
+        public ReverseNumber()
+        {
+        }
+
+        public ReverseNumber(int rN)
             {
-                if (n % i == 0)
-                {
-                    sum = sum + i;
-                    Console.Write("{0}  ", i);
-                }
+                RN = rN;
             }
-            Console.Write("\nThe sum of the divisor is : {0}", sum);
-            if (sum == n)
-                Console.Write("\nSo, the number is prime.");
-            else
-                Console.Write("\nSo, the number is not prime.");
-            Console.Write("\n");
+            public static ReverseNumber UserInputForReverseNumber()
+            {
+                Console.WriteLine("Enter the Number to get Reverse Number : ");
+                int r = Convert.ToInt32(Console.ReadLine());
+
+                return new ReverseNumber(r)
+                {
+                    RN = r
+                };
+            }
+            public void CalculateReverseNumber()
+            {
+                int reverse = 0, rem;
+
+                while (RN != 0)
+                {
+                    rem = RN % 10;
+                    reverse = (reverse * 10) + rem;
+                    RN /= 10;
+                }
+                Console.WriteLine("Reverse Number is : " + reverse);
+            }
+
         }
     }
-}
